@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MBEYA STORE</title>
+
+    <link rel="stylesheet" href="css/dashboard.css">
+</head>
+<body>
+
+    <div class="container">
+
+        <header class="topbar">
+            <button id="menuToggle" class="menu-toggle" aria-label="Toggle menu">☰</button>
+            <div class="brand">
+                <h2></h2>
+            </div>
+            <nav class="hamburger-menu" id="hamburgerMenu">
+                <ul class="menu">
+                    <li><a href="#">Dashboard</a></li>
+                    <li><a href="#salesForm">Add Sales</a></li>
+                    <li><a href="#summary">Sales Summary</a></li>
+                    <li><a href="#history">Sales History</a></li>
+                    <li>
+                        <button id="logoutBtn">
+                            Logout
+                        </button>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+
+        <!-- Home Slider -->
+        <section id="home" class="home-slider">
+            <div class="slider" id="homeSlider">
+                <div class="slide active" style="background-image:url('css/javascript/image/image2.jpg')"></div>
+                <div class="slide" style="background-image:url('css/javascript/image/image3.jpg')"></div>
+                <div class="slide" style="background-image:url('css/javascript/image/image4.jpg')"></div>
+                <div class="slide-overlay">
+                    <h1>MBEYA STORE</h1>
+                    <p>Manage Your Daily Sales Easily</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Main Content -->
+        <main class="main-content">
+
+            <!-- Summary Section -->
+            <section id="summary" class="summary">
+
+                <div class="card">
+                    <h3>Total Sales</h3>
+                    <p id="totalSales">Tsh 0</p>
+                </div>
+
+                <div class="card">
+                    <h3>Total Records</h3>
+                    <p id="totalRecords">0</p>
+                </div>
+
+                <div class="card">
+                    <h3>Current User</h3>
+                    <p id="currentUser">Admin</p>
+                </div>
+
+            </section>
+
+            <!-- Add Sales -->
+            <section class="sales-form-section">
+
+                <h2>Add New Sale</h2>
+
+                <form id="salesForm">
+
+                    <input
+                        type="date"
+                        id="saleDate"
+                        required
+                    >
+
+                    <input
+                        type="number"
+                        id="saleAmount"
+                        placeholder="Enter Amount"
+                        required
+                    >
+
+                    <input
+                        type="text"
+                        id="sellerName"
+                        placeholder="Seller Name"
+                        required
+                    >
+
+                    <button type="submit">
+                        Save Sale
+                    </button>
+
+                </form>
+
+            </section>
+
+            <!-- Search -->
+            <section class="search-section">
+
+                <input
+                    type="text"
+                    id="searchInput"
+                    placeholder="Search by Seller Name..."
+                >
+
+            </section>
+
+            <!-- Sales History -->
+            <section id="history">
+
+                <h2>Today's Sales History</h2>
+
+                <table>
+
+                    <thead>
+
+                        <tr>
+                            <th>Date</th>
+                            <th>Amount (Tsh)</th>
+                            <th>Seller</th>
+                            <th>Actions</th>
+                        </tr>
+
+                    </thead>
+
+                    <tbody id="salesTable">
+
+                    </tbody>
+
+                </table>
+
+            </section>
+
+        </main>
+
+    </div>
+
+    <footer>
+        <p>© 2026 MBEYA STORE | All Rights Reserved</p>
+    </footer>
+
+    <script src="css/javascript/dashboard.js"></script>
+
+</body>
+</html>
